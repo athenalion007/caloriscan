@@ -446,9 +446,13 @@
         </div>
         
         <footer>
-            <p>
+            <p id="footer-zh">
                 <a href="https://athenalion007.github.io/caloriscan-support">技术支持</a>
                 <a href="https://athenalion007.github.io/caloriscan-support/privacy.html">隐私政策</a>
+            </p>
+            <p id="footer-en" class="hidden">
+                <a href="https://athenalion007.github.io/caloriscan-support">Support</a>
+                <a href="https://athenalion007.github.io/caloriscan-support/privacy.html">Privacy Policy</a>
             </p>
             <p style="margin-top: 20px;">© 2024 CaloriScan. All rights reserved.</p>
         </footer>
@@ -458,6 +462,8 @@
         function switchLang(lang) {
             document.getElementById('content-zh').classList.toggle('hidden', lang !== 'zh');
             document.getElementById('content-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('footer-zh').classList.toggle('hidden', lang !== 'zh');
+            document.getElementById('footer-en').classList.toggle('hidden', lang !== 'en');
             
             document.querySelectorAll('.lang-switch button').forEach(btn => {
                 btn.classList.toggle('active', 
